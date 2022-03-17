@@ -1,9 +1,13 @@
-import './App.css'
+import "./App.css";
+import Main from "./components/Main";
+import Provider from "./components/store/Provider";
 
 function App() {
   return (
-    <h1>1234</h1>
-  )
+    <Provider>
+      <Main />
+    </Provider>
+  );
 }
 
-export default App
+export default App;
