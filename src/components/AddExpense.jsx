@@ -6,7 +6,7 @@ import context from "./store/context";
 import Notification from "./UI/Notification";
 
 const AddExpense = () => {
-  const { items, total, dispatch } = useContext(context);
+  const { items, dispatch } = useContext(context);
   const [expense, setExpense] = useState("");
   const [price, setPrice] = useState("");
   const [error, setError] = useState(false);
@@ -39,8 +39,6 @@ const AddExpense = () => {
       setId((prev) => prev + 1);
     }
   };
-
-  console.log(items);
 
   return (
     <Fragment>
