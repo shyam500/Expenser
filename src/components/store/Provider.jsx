@@ -10,7 +10,7 @@ const reducerFunc = (state, action) => {
   switch (action.type) {
     case "add":
       return {
-        items: [...state.items, action.payload.item],
+        items: [...state.items, action.payload],
         total: state.total + action.payload.item.price,
       };
     case "remove":
