@@ -8,7 +8,7 @@ import Notification from "./UI/Notification";
 const AddExpense = () => {
   const { items, dispatch } = useContext(context);
   const [expense, setExpense] = useState("");
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState(0);
   const [error, setError] = useState(false);
   const [id, setId] = useState(0);
 
@@ -34,7 +34,7 @@ const AddExpense = () => {
     if (expense.length > 0 && price > 0) {
       setError(false);
       setExpense("");
-      setPrice("");
+      setPrice(0);
       dispatch({ type: "add", payload: { id, item: expense, price } });
       setId((prev) => prev + 1);
     }
@@ -49,16 +49,21 @@ const AddExpense = () => {
         />
       )}
       <form className={classes.expense_container} onSubmit={formSubmitHandler}>
+          <label htmlFor="expense">Expense</label>
         <input
+        id="expense"
           onChange={expenseHandler}
           type="text"
           value={expense}
-          placeholder="Enter Expense "
+          placeholder="eg : snaks"
           className={classes.input}
         />
+        <label htmlFor="price">Price</label>
         <input
+        id="price"
           value={price}
           onChange={priceHandler}
+          onClick={()=>setPrice('')}
           type="number"
           placeholder="Enter Price"
           className={classes.input}

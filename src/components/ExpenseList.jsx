@@ -4,12 +4,14 @@ import classes from "./ExpenseList.module.css";
 import ListItem from "./ListItem";
 
 const ExpenseList = () => {
-  const { items } = useContext(context);
+  const { items,total } = useContext(context);
+  console.log(total);
   return (
     <ul className={classes.container}>
       {items.map((each) => (
-        <ListItem id={id} item={items} price={price}/>
+        <ListItem  key={each.id} item={each.item} price={each.price} />
       ))}
+      <hr />
     </ul>
   );
 };
