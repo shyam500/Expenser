@@ -1,6 +1,5 @@
 import classes from "./ListItem.module.css";
-import context from "./store/context";
-import { useContext } from "react";
+import trash from '../../files/trash.png';
 
 const ListItem = ({ item, price, dispatch }) => {
 
@@ -12,9 +11,7 @@ const ListItem = ({ item, price, dispatch }) => {
     <li className={classes.list_item}>
       {item}
       <span className={classes.list_price}>{price} rupees</span>
-      <span className={classes.delete_btn} onClick={() => deleteHandler(item)}>
-        X
-      </span>
+      <img src={trash} className={classes.delete_btn} onClick={() => deleteHandler(item)}/>
     </li>
   );
 };
