@@ -6,7 +6,6 @@ const ListItem = ({ item, price, dispatch }) => {
 
   const deleteHandler = (item) => {
     dispatch({ type: "remove", payload: item});
-    console.log(item);
   };
 
   return (

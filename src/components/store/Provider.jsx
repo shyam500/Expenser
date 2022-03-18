@@ -29,7 +29,11 @@ const Provider = ({ children }) => {
 
   return (
     <context.Provider
-      value={{ items: data.items, total: data.total, dispatch: dispatchFunc }}
+      value={{
+        items: data.items,
+        total: data.total,
+        dispatch: dispatchFunc,
+      }}
     >
       {children}
     </context.Provider>
