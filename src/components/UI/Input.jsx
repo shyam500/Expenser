@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import classes from "./Input.module.css";
 
 const Input = ({
-    id,
+    id, 
   label,
   onchange,
   onclick = null,
@@ -11,7 +11,7 @@ const Input = ({
   placeholder,
 }) => {
   return (
-    <Fragment>
+    <section className={classes.form_container}>
       <label htmlFor={id} className={classes.label} >{label}</label>
       <input
         id={id}
@@ -22,7 +22,7 @@ const Input = ({
         placeholder={placeholder}
         className={classes.input}
       />
-    </Fragment>
+    </section>
   );
 };
 

@@ -1,0 +1,33 @@
+.container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+   height: 100vh;
+   width: 100vw;
+   background-color: rgba(0,0,0,0.6);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.container > h2{
+    color: white;
+}
+
+.container > button{
+    padding: 0.2rem 3rem;
+    font: normal bold 1rem 'poppins';
+    margin-top: 1rem;
+    color: #fffdfd;
+    background: rgb(112, 112, 112);
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s linear;
+}
+
+.container > button:hover{
+    color: rgb(112, 112, 112) ;
+    background:#fffdfd;
+}

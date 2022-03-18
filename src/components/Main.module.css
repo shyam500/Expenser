@@ -1,0 +1,27 @@
+ :root{
+     --text_color:#575656
+ }
+
+ .container{
+     height: 90vh;
+     width: 90vw;
+     padding: 1rem;
+     margin: auto;
+     border: 3px solid var(--text_color);
+     border-radius: 10px;
+ }
+
+ .heading{
+     border-bottom: 3px solid var(--text_color);
+    font-size: 2.2rem;
+    padding: 0.5rem;
+    color: #dbd8d8;
+    margin-bottom: 1.2rem;
+ }
+
+ .notfound{
+    text-align: center;
+    color: var(--text_color);
+    font-size: 2.2rem;
+    margin-top: 10rem;
+ }

@@ -1,0 +1,24 @@
+.form_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0rem;
+}
+
+.form_container > label{
+    padding: 0rem 0.5rem;
+ color: #383838;
+ font-weight: bold;
+}
+
+.form_container > input{
+    width: 70vw;
+    padding: 0.3rem;
+    border: none;
+    transition: 0.1s linear;
+    border-radius: 3px;
+}
+
+.form_container > input:hover{
+    background-color: #c2bfbf;
+}

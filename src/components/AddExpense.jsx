@@ -16,7 +16,7 @@ const AddExpense = () => {
   const expenseHandler = (e) => {
     setExpense(e.target.value);
   };
-
+ 
   const priceHandler = (e) => {
     setPrice(e.target.value);
   };
@@ -46,7 +46,7 @@ const AddExpense = () => {
       {error && (
         <Notification
           func={() => setError(false)}
-          message="Please Check Input Fields"
+          message="Please Check All Input Fields"
         />
       )}
       <form className={classes.expense_container} onSubmit={formSubmitHandler}>
@@ -59,7 +59,7 @@ const AddExpense = () => {
         />
         <Input
           id="price"
-          label="Expense"
+          label="Amount"
           placeholder="Enter Amount"
           value={price}
           onchange={priceHandler}

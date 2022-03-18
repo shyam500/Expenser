@@ -10,7 +10,7 @@ const Main = () => {
     <section className={classes.container}>
       <h1 className={classes.heading}>Expenser</h1>
       <AddExpense />
-      {items.length > 0 ? <ExpenseList /> : <h1>No items Found</h1>}
+      {items.length > 0 ? <ExpenseList /> : <h1 className={classes.notfound}>No items Found</h1>}
     </section>
   );
 };
