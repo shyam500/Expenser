@@ -11,12 +11,12 @@ const reducerFunc = (state, action) => {
     case "add":
       return {
         items: [...state.items, action.payload],
-        total:+state.total + +action.payload.price,
+        total: +state.total + +action.payload.price,
       };
     case "remove":
       const delItem = state.items.find((each) => each.item === action.payload);
       return {
-        items: state.items.filter((each) => each.item !== delItem.item),
+        items: state.items.filter((each) => each.item !== action.payload),
         total: state.total - delItem.price,
       };
     default:
