@@ -7,7 +7,7 @@ const Input = ({
   onchange,
   onclick = null,
   type,
-  value,
+  value, 
   placeholder,
 }) => {
   return (

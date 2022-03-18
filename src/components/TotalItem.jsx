@@ -7,5 +7,5 @@ const TotalItem = ({ total }) => {
     </li>
   );
 };
-
+ 
 export default TotalItem;

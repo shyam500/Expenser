@@ -9,6 +9,7 @@
      margin: auto;
      border: 3px solid var(--text_color);
      border-radius: 10px;
+     background-color: rgba(0,0,0,0.3);
  }
 
  .heading{
@@ -21,7 +22,7 @@
 
  .notfound{
     text-align: center;
-    color: var(--text_color);
-    font-size: 2.2rem;
+    color: rgb(70, 69, 69);
+    font-size: 1.5rem;
     margin-top: 10rem;
  }

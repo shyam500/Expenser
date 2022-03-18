@@ -16,7 +16,7 @@ const AddExpense = () => {
   const expenseHandler = (e) => {
     setExpense(e.target.value);
   };
- 
+
   const priceHandler = (e) => {
     setPrice(e.target.value);
   };
@@ -32,6 +32,9 @@ const AddExpense = () => {
     if (price < 1) {
       setError(true);
     }
+    if (typeof price === "string") {
+      setError(true);
+    }
     if (expense.length > 0 && price > 0) {
       setError(false);
       setExpense("");
@@ -40,7 +43,6 @@ const AddExpense = () => {
       setId((prev) => prev + 1);
     }
   };
-
   return (
     <Fragment>
       {error && (

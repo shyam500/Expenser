@@ -1,8 +1,8 @@
 .expense_container {
-  border: 1px solid rgb(94, 93, 93);
+  border: 1px solid #e0dddd;
   height: 20vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
@@ -23,4 +23,10 @@
 
 .button:hover {
     background-color: #c2bfbf;
+}
+
+@media screen and (max-width:650px) {
+  .button{
+      width: 40vw;
+  }
 }

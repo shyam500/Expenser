@@ -1,4 +1,10 @@
-.container {
+.container { 
   display: flex;
-  border: 1px solid red;
+  flex-direction: column;
+  border: 1px solid #e0dddd;
+  border-radius: 10px;
+  margin-top: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  border-bottom: none;
 }

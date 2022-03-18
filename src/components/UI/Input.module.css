@@ -2,13 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 0rem; 
 }
 
 .form_container > label{
     padding: 0rem 0.5rem;
- color: #383838;
- font-weight: bold;
+ color: #e0dddd;
 }
 
 .form_container > input{
@@ -21,4 +20,22 @@
 
 .form_container > input:hover{
     background-color: #c2bfbf;
+}
+
+@media screen and (max-width:650px) {
+    .form_container > input{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .form_container > input{
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .form_container > input{
+        width: 40vw;
+    }
 }

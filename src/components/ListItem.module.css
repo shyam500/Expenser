@@ -1,0 +1,18 @@
+.list_item{
+    border-bottom:1px solid #e0dddd;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    color: rgb(235, 225, 225);
+    transition: 0.1s linear;
+}
+
+.list_item:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+.delete_btn{
+    height: 25px;
+
+}
