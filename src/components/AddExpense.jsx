@@ -8,11 +8,10 @@ import Input from "./UI/Input";
 import { motion } from "framer-motion";
 
 const AddExpense = () => {
-  const { dispatch } = useContext(context);
+  const { dispatch, id, items } = useContext(context);
   const [expense, setExpense] = useState("");
   const [price, setPrice] = useState(0);
   const [error, setError] = useState(false);
-  const [id, setId] = useState(0);
 
   const expenseHandler = (e) => {
     setExpense(e.target.value);
@@ -39,9 +38,9 @@ const AddExpense = () => {
     if (expense.length > 0 && price > 0) {
       setError(false);
       dispatch({ type: "add", payload: { id, item: expense, price } });
+      localStorage.setItem("expenses", JSON.stringify(items));
       setExpense("");
       setPrice(0);
-      setId((prev) => prev + 1);
     }
   };
 
@@ -55,9 +54,9 @@ const AddExpense = () => {
       )}
 
       <motion.form
-        initial={{scale:0.2}}
-        animate={{scale:1}}
-        transition={{ type: "spring", stiffness: 50 }}
+        initial={{ scale: 0.2 }}
+        animate={{ scale: 1 }}
+        transition={{ type: "spring", stiffness: 80 }}
         className={classes.expense_container}
         onSubmit={formSubmitHandler}
       >
@@ -80,7 +79,6 @@ const AddExpense = () => {
           submit
         </button>
       </motion.form>
-
     </Fragment>
   );
 };
