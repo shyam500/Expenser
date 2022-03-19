@@ -4,13 +4,14 @@ import context from "./context";
 let initialArr = [];
 let initialId = 0;
 
-if( localStorage.getItem("expenses")){
-  initialArr = JSON.parse(localStorage.getItem("expenses"));
-  initialId = initialArr[initialArr.length-1].id;
-};
+if (localStorage.getItem("expenses")) {
+  const arr = JSON.parse(localStorage.getItem("expenses"));
+  initialArr = arr;
+  initialId = arr[arr.length - 1].id + 1;
+}
 
 const initialValue = {
-  items:initialArr,
+  items: initialArr,
   total: 0,
   id: initialId,
 };

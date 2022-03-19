@@ -38,7 +38,7 @@ const AddExpense = () => {
     if (expense.length > 0 && price > 0) {
       setError(false);
       dispatch({ type: "add", payload: { id, item: expense, price } });
-      localStorage.setItem("expenses", JSON.stringify(items));
+      localStorage.setItem("expenses", JSON.stringify([...items, { id, item: expense, price }]));
       setExpense("");
       setPrice(0);
     }
