@@ -7,7 +7,7 @@ let initialId = 0;
 if (localStorage.getItem("expenses")) {
   const arr = JSON.parse(localStorage.getItem("expenses"));
   initialArr = arr;
-  initialId = arr[arr.length - 1].id + 1;
+  initialId = arr.length > 0 ? arr[arr.length - 1].id + 1 : 0;
 }
 
 const initialValue = {
