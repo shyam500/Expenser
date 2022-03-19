@@ -12,7 +12,7 @@ const Main = () => {
       <AddExpense />
       {items.length > 0 ? <ExpenseList /> : <h1 className={classes.notfound}>No items Found</h1>}
     </section>
-  );
+  ); 
 };
 
 export default Main;

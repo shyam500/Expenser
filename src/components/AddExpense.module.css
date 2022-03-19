@@ -17,13 +17,14 @@
   transition: 0.2s ease-out;
   color: #545454;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1rem; 
   border-radius: 3px;
 }
 
 .button:hover {
     background-color: #c2bfbf;
 }
+
 
 @media screen and (max-width:650px) {
   .button{

@@ -4,7 +4,7 @@ import context from "./context";
 const initialValue = {
   items: [],
   total: 0,
-}; 
+};
 
 const reducerFunc = (state, action) => {
   switch (action.type) {
@@ -19,7 +19,7 @@ const reducerFunc = (state, action) => {
         items: state.items.filter((each) => each.id !== action.payload),
         total: state.total - delItem.price,
       };
-    default: 
+    default:
       return initialValue;
   }
 };

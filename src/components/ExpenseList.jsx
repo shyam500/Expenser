@@ -11,7 +11,7 @@ const ExpenseList = () => {
     <Fragment>
     <ul className={classes.container}>
       {items.map((each) => (
-        <ListItem
+        <ListItem 
           key={each.id}
           id={each.id}
           item={each.item}

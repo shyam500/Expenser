@@ -5,6 +5,7 @@ import classes from "./AddExpense.module.css";
 import context from "./store/context";
 import Notification from "./UI/Notification";
 import Input from "./UI/Input";
+import { motion } from "framer-motion";
 
 const AddExpense = () => {
   const { dispatch } = useContext(context);
@@ -37,12 +38,13 @@ const AddExpense = () => {
     }
     if (expense.length > 0 && price > 0) {
       setError(false);
+      dispatch({ type: "add", payload: { id, item: expense, price } });
       setExpense("");
       setPrice(0);
-      dispatch({ type: "add", payload: { id, item: expense, price } });
       setId((prev) => prev + 1);
     }
   };
+
   return (
     <Fragment>
       {error && (
@@ -51,7 +53,14 @@ const AddExpense = () => {
           message="Please Check All Input Fields"
         />
       )}
-      <form className={classes.expense_container} onSubmit={formSubmitHandler}>
+
+      <motion.form
+        initial={{scale:0.2}}
+        animate={{scale:1}}
+        transition={{ type: "spring", stiffness: 50 }}
+        className={classes.expense_container}
+        onSubmit={formSubmitHandler}
+      >
         <Input
           id="expense"
           label="Expense"
@@ -70,7 +79,8 @@ const AddExpense = () => {
         <button type="submit" className={classes.button}>
           submit
         </button>
-      </form>
+      </motion.form>
+
     </Fragment>
   );
 };
