@@ -5,7 +5,9 @@ const ListItem = ({ id, item, price, dispatch }) => {
   const deleteHandler = (item) => {
     dispatch({ type: "remove", payload: item });
     const arr = JSON.parse(localStorage.getItem("expenses"));
-    const newLocalArr = arr.filter((each) => each.item !== item);
+    const newLocalArr = arr.filter((each) => each.id !== item);
+    console.log(arr);
+    console.log(newLocalArr);
     localStorage.setItem("expenses", JSON.stringify(newLocalArr));
   };
 
